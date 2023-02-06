@@ -6,7 +6,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def abrir_site():
-    return render_template("site_nomes.html")
+    return render_template("index.html")
 @app.route('/pesquisar',methods=['POST'])
 def pesquisa():
     ultimo_valor=0
@@ -27,5 +27,5 @@ def pesquisa():
         return render_template('site_nomes.html',z=ultimo_valor,y=pen_valor,x=antipen_valor)
     except:
         print("Data não encontrada")
-        return render_template('site_nomes.html',z=ultimo_valor,y=pen_valor,x=antipen_valor)
+        return render_template('index.html',z=ultimo_valor,y=pen_valor,x=antipen_valor)
 app.run()
