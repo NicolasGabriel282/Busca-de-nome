@@ -1,5 +1,3 @@
-
-from distutils.log import error
 from flask import Flask, render_template,request
 import json, requests
 from pprint import pprint 
